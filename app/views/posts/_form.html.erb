@@ -1,0 +1,35 @@
+<%= form_with(model: post, local: true) do |form| %>
+  <% if post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+        <% post.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field stararea">
+    <input id="post_rate1" type="radio" name="post[rate]" value="5" />
+    <label for="post_rate1"><span class="text">最高</span><br><span class="star">★</span></label>
+    <input id="post_rate2" type="radio" name="post[rate]" value="4" />
+    <label for="post_rate2"><span class="text">良い</span><br><span class="star">★</span></label>
+    <input id="post_rate3" type="radio" name="post[rate]" value="3" />
+    <label for="post_rate3"><span class="text">普通</span><br><span class="star">★</span></label>
+    <input id="post_rate4" type="radio" name="post[rate]" value="2" />
+    <label for="post_rate4"><span class="text">悪い</span><br><span class="star">★</span></label>
+    <input id="post_rate5" type="radio" name="post[rate]" value="1" />
+    <label for="post_rate5"><span class="text">最悪</span><br><span class="star">★</span></label>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
