@@ -10,13 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_17_140435) do
+ActiveRecord::Schema.define(version: 2020_12_07_022420) do
 
   create_table "posts", force: :cascade do |t|
     t.string "title"
-    t.float "rate"
+    t.integer "rate"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "kindness"
+    t.integer "sadness"
+    t.integer "bitterness"
   end
 
 end

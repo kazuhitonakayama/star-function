@@ -2,12 +2,16 @@
 
 <h1>Posts</h1>
 
+
 <table>
   <thead>
     <tr>
       <th>Title</th>
       <th>Rate</th>
-      <th colspan="3"></th>
+      <th>Kindness</th>
+      <th>Sadnedd</th>
+      <th>Bitterness</th>
+      <th colspan="5"></th>
     </tr>
   </thead>
 
@@ -15,7 +19,18 @@
     <% @posts.each do |post| %>
       <tr>
         <td><%= post.title %></td>
-        <td><%= post.rate %></td>
+        <td>
+          <%= post.rate %>
+        </td>
+        <td>
+          <%= post.kindness %>
+        </td>
+        <td>
+          <%= post.sadness %>
+        </td>
+        <td>
+          <%= post.bitterness %>
+        </td>
         <td><%= link_to 'Show', post %></td>
         <td><%= link_to 'Edit', edit_post_path(post) %></td>
         <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>

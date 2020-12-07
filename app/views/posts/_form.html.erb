@@ -16,6 +16,7 @@
     <%= form.text_field :title %>
   </div>
 
+  <p>満足度</p>
   <div class="field stararea">
     <input id="post_rate1" type="radio" name="post[rate]" value="5" />
     <label for="post_rate1"><span class="text">最高</span><br><span class="star">★</span></label>
@@ -28,6 +29,50 @@
     <input id="post_rate5" type="radio" name="post[rate]" value="1" />
     <label for="post_rate5"><span class="text">最悪</span><br><span class="star">★</span></label>
   </div>
+
+  <p>優しさ</p>
+  <div class="field stararea">
+    <input id="post_rate6" type="radio" name="post[kindness]" value="5" />
+    <label for="post_rate6"><span class="text">最高</span><br><span class="star">★</span></label>
+    <input id="post_rate7" type="radio" name="post[kindness]" value="4" />
+    <label for="post_rate7"><span class="text">良い</span><br><span class="star">★</span></label>
+    <input id="post_rate8" type="radio" name="post[kindness]" value="3" />
+    <label for="post_rate8"><span class="text">普通</span><br><span class="star">★</span></label>
+    <input id="post_rate9" type="radio" name="post[kindness]" value="2" />
+    <label for="post_rate9"><span class="text">悪い</span><br><span class="star">★</span></label>
+    <input id="post_rate10" type="radio" name="post[kindness]" value="1" />
+    <label for="post_rate10"><span class="text">最悪</span><br><span class="star">★</span></label>
+  </div>
+
+  <p>悲しさ</p>
+  <div class="field stararea">
+    <input id="post_rate11" type="radio" name="post[sadness]" value="5" />
+    <label for="post_rate11"><span class="text">最高</span><br><span class="star">★</span></label>
+    <input id="post_rate12" type="radio" name="post[sadness]" value="4" />
+    <label for="post_rate12"><span class="text">良い</span><br><span class="star">★</span></label>
+    <input id="post_rate13" type="radio" name="post[sadness]" value="3" />
+    <label for="post_rate13"><span class="text">普通</span><br><span class="star">★</span></label>
+    <input id="post_rate14" type="radio" name="post[sadness]" value="2" />
+    <label for="post_rate14"><span class="text">悪い</span><br><span class="star">★</span></label>
+    <input id="post_rate15" type="radio" name="post[sadness]" value="1" />
+    <label for="post_rate15"><span class="text">最悪</span><br><span class="star">★</span></label>
+  </div>
+
+  <p>苦しさ</p>
+  <div class="field stararea">
+    <input id="post_rate16" type="radio" name="post[bitterness]" value="5" />
+    <label for="post_rate16"><span class="text">最高</span><br><span class="star">★</span></label>
+    <input id="post_rate17" type="radio" name="post[bitterness]" value="4" />
+    <label for="post_rate17"><span class="text">良い</span><br><span class="star">★</span></label>
+    <input id="post_rate18" type="radio" name="post[bitterness]" value="3" />
+    <label for="post_rate18"><span class="text">普通</span><br><span class="star">★</span></label>
+    <input id="post_rate19" type="radio" name="post[bitterness]" value="2" />
+    <label for="post_rate19"><span class="text">悪い</span><br><span class="star">★</span></label>
+    <input id="post_rate20" type="radio" name="post[bitterness]" value="1" />
+    <label for="post_rate20"><span class="text">最悪</span><br><span class="star">★</span></label>
+  </div>
+
+  
 
   <div class="actions">
     <%= form.submit %>
