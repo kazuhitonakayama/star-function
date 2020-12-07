@@ -42,3 +42,33 @@
 <br>
 
 <%= link_to 'New Post', new_post_path %>
+
+<canvas id="myChart"></canvas>
+<script>
+var ctx = document.getElementById("myChart");
+var myChart = new Chart(ctx, {
+  type: 'radar',
+  data: {
+    labels: ["Rate", "Kindness", "Sadness", "Bitterness"],
+    datasets: 
+    [
+      <% @posts.each do |post| %>
+        {
+        label: '<%= post.title %>',
+        backgroundColor: "rgba(0,0,80,0.4)",
+        borderColor: "rgba(0,0,80,1)",
+        data: [<%= post.rate %>, <%= post.kindness %>, <%= post.sadness %>, <%= post.bitterness %>]
+        },
+      <% end %>
+    ]
+  },
+  options: {
+      scale: {
+          ticks: {
+              suggestedMin: 0,
+              suggestedMax: 5
+          }
+      }
+  }
+});
+</script>
