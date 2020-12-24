@@ -52,14 +52,23 @@ var myChart = new Chart(ctx, {
     labels: ["Rate", "Kindness", "Sadness", "Bitterness"],
     datasets: 
     [
-      <% @posts.each do |post| %>
+      <% @ratesum=@posts.sum(:rate) %>
+      <% @ratecount=@posts.count(:rate) %>
+
+      <% @kindnesssum=@posts.sum(:kindness) %>
+      <% @kindnesscount=@posts.count(:kindness) %>
+
+      <% @sadnesssum=@posts.sum(:sadness) %>
+      <% @sadnesscount=@posts.count(:kindness) %>
+
+      <% @bitternesssum=@posts.sum(:bitterness) %>
+      <% @bitternesscount=@posts.count(:kindness) %>
         {
-        label: '<%= post.title %>',
-        backgroundColor: "rgba(0,0,80,0.4)",
-        borderColor: "rgba(0,0,80,1)",
-        data: [<%= post.rate %>, <%= post.kindness %>, <%= post.sadness %>, <%= post.bitterness %>]
+        label: "テスト",
+        backgroundColor: 'rgba(122,255,129,0.2)',
+        borderColor: '#000',
+        data: [<%= @ratesum.to_f/@ratecount %>, <%= @kindnesssum.to_f/@kindnesscount %>, <%= @sadnesssum.to_f/@sadnesscount %>, <%= @bitternesssum.to_f/@bitternesscount %>]
         },
-      <% end %>
     ]
   },
   options: {

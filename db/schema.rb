@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_07_022420) do
+ActiveRecord::Schema.define(version: 2020_12_07_034608) do
 
   create_table "posts", force: :cascade do |t|
     t.string "title"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 2020_12_07_022420) do
     t.integer "kindness"
     t.integer "sadness"
     t.integer "bitterness"
+    t.string "color"
   end
 
 end
